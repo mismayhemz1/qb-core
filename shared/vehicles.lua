@@ -27,6 +27,20 @@ local Vehicles = {
     { model = 'prairie',         name = 'Prairie',                       brand = 'Bollokan',        price = 30000,   category = 'compacts',       type = 'automobile', shop = 'pdm' },
     { model = 'rhapsody',        name = 'Rhapsody',                      brand = 'Declasse',        price = 10000,   category = 'compacts',       type = 'automobile', shop = 'pdm' },
     { model = 'brioso2',         name = 'Brioso 300',                    brand = 'Grotti',          price = 12000,   category = 'compacts',       type = 'automobile', shop = 'pdm' },
+
+
+    QBShared.Vehicles = {
+  ['asbo'] = {
+    model = 'asbo',
+    name = 'Asbo',
+    brand = 'Maxwell',
+    price = 4000,            -- purchase price
+    category = 'compacts',
+    type = 'automobile',     -- e.g. automobile, bike, boat, heli, plane
+    shop = 'pdm'             -- which dealership sells it
+  },
+}
+
     { model = 'weevil',          name = 'Weevil',                        brand = 'BF',              price = 9000,    category = 'compacts',       type = 'automobile', shop = 'pdm' },
     { model = 'issi7',           name = 'Issi Sport',                    brand = 'Weeny',           price = 100000,  category = 'compacts',       type = 'automobile', shop = 'pdm' },
     { model = 'blista2',         name = 'Blista Compact',                brand = 'Dinka',           price = 18950,   category = 'compacts',       type = 'automobile', shop = 'pdm' },
@@ -779,5 +793,4 @@ for i = 1, #Vehicles do
         type = Vehicles[i].type,
         shop = Vehicles[i].shop
     }
-    QBShared.VehicleHashes[hash] = QBShared.Vehicles[Vehicles[i].model]
 end
